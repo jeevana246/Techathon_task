@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'index1.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+{% endblock css %}
+
+{% block body %}
+<br>
+<center><h2 style="color: white;">Online shopping system</h2>
+<h3 style="color: white">Multi user Multi Role Login system</h3></center>
+<div class="container">
+    <div class="box">
+        <div class="icon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+        <div class="content">
+            <h3>Customer</h3>
+            <p>
+                Enables them to browse the firm's range of products and services,
+                view photos or images of the products, 
+                along with information about the product specifications, features and prices.
+            </p>
+        </div>
+        <div>
+            <a href="{% url 'register' %}" class="btn btn-primary">Signup</a><br><br>
+            <a href="{% url 'userlogin' %}" class="btn btn-primary">Login</a>
+            
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="icon"><i class="fa fa-motorcycle" aria-hidden="true"></i></div>
+        <div class="content">
+            <h3>Retailer</h3>
+            <p>
+                Deliver various items to different addresses as assigned.
+                Stick to a schedule and be time-bound on the job.
+                Follow the prescribed routes most convenient for delivery.
+            </p>
+        </div>
+        <div>
+            <a href="{% url 'ureg' %}" class="btn btn-primary">Signup</a><br><br>
+            <a href="{% url 'ulog' %}" class="btn btn-primary">Login</a>
+            
+        </div>
+        
+    </div>
+    <div class="box">
+        <div class="icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+        <div class="content">
+            <h3>Producer</h3>
+            <p>
+                He takes care of the products in the store and takes care of the orders placed by the customers.
+                He assigns the order to the delivery man and the adress of the customer. 
+                
+            </p>
+        </div>
+        <div>
+            <a href="{% url 'reg' %}" class="btn btn-primary">Signup</a><br><br>
+            <a href="{% url 'log' %}" class="btn btn-primary">Login</a>
+            
+        </div>
+    </div>
+</div>
+{% endblock body %}
